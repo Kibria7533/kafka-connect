@@ -1,0 +1,18 @@
+GRANT ALL PRIVILEGES ON demo.* TO 'debezium'@'%'; 
+
+CREATE DATABASE kafkaconnect;
+GRANT ALL PRIVILEGES ON kafkaconnect.* TO 'debezium'@'%';
+use kafkaconnect;
+CREATE TABLE `money_transfer_data`
+(
+    `SENDER_NAME`             int(11)       NOT NULL,
+    `RECEIVER_NAME`                varchar(256)  NOT NULL,
+    `SENDER_ACCT`         int(11)       NOT NULL,
+    `RECEIVER_ACCT`              varchar(256)  NOT NULL,
+    `AMOUNT`               varchar(256)  NOT NULL,
+    `SENDER_BANK`               varchar(1024) NOT NULL,
+    `RECEIVER_BANK`            varchar(512)  NOT NULL,
+    `TXN_ID`            int(11)       NOT NULL,
+    `TXN_DATE`        varchar(256)  NOT NULL,
+     PRIMARY KEY (`TXN_ID`)
+);

@@ -1,0 +1,11 @@
+{
+    "name": "elastikConnector",
+    "config": {
+        "connector.class": "io.confluent.connect.elasticsearch.ElasticsearchSinkConnector",
+            "topics": "movies",
+            "connection.url": "http://****:9200",
+            "type.name": "type.name=kafkaconnect",
+            "key.ignore": "true",
+            "schema.ignore": "true"
+    }
+  }
