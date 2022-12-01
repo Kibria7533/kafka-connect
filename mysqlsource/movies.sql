@@ -2,6 +2,7 @@
 CREATE DATABASE demo;
 use demo;
 
+ALTER USER 'root'@'%' IDENTIFIED WITH mysql_native_password BY 'pass';
 -- BEGIN TABLE movies
 DROP TABLE IF EXISTS movies;
 CREATE TABLE `movies`
