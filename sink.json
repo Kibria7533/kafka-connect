@@ -16,7 +16,7 @@
       "errors.log.include.messages": true,
       "connection.attempts": "6",
       "connection.backoff.ms": "1000",
-      "connection.url": "jdbc:mysql://172.19.0.3:3306/demo?autoReconnect=true&useSSL=false",
+      "connection.url": "jdbc:mysql://172.23.0.8:3306/demo?autoReconnect=true&useSSL=false",
       "connection.user": "root",
       "connection.password": "pass",
       "insert.mode": "upsert",

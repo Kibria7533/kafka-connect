@@ -127,11 +127,22 @@ services:
   sink:
     build: ./mysqlsink
     container_name: sink
+    depends_on:
+      - broker
+      - schema-registry
+      - connect
+      - control-center
     environment:
       MYSQL_ROOT_PASSWORD: pass
   source:
     build: ./mysqlsource
     container_name: source
+    depends_on:
+      - broker
+      - schema-registry
+      - connect
+      - control-center
+      - sink
     environment:
       MYSQL_ROOT_PASSWORD: pass
 
