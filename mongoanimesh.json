@@ -1,0 +1,21 @@
+{
+  "name": "new_check",
+  "config": {
+    "connector.class": "com.mongodb.kafka.connect.MongoSinkConnector",
+    "topics.regex": "moviesserver.demo.movies",
+    "batch.size": 0,
+    "connection.uri": "mongodb://192.168.96.2:27017/mongosink",
+    "database": "mongosink",
+    "errors.tolerance": "all",
+    "errors.log.include.messages": true,
+    "document.id.strategy": "com.mongodb.kafka.connect.sink.processor.id.strategy.FullKeyStrategy",
+    "buffer.capacity": "20000",
+    "key.converter": "io.confluent.connect.avro.AvroConverter",
+    "value.converter": "io.confluent.connect.avro.AvroConverter",
+    "key.converter.schema.registry.url": "http://schema-registry:8081",
+    "value.converter.schema.registry.url": "http://schema-registry:8081",
+    "insert.mode": "upsert",
+    "pk.mode": "record_key",
+    "pk.fields": "movie_id"
+  }
+}
