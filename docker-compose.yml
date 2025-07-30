@@ -60,7 +60,7 @@ services:
       - broker
       - schema-registry
     ports:
-      - "8083:8083"
+      - "8084:8083"
     environment:
       CONNECT_BOOTSTRAP_SERVERS: "broker:29092"
       CONNECT_REST_ADVERTISED_HOST_NAME: connect
@@ -132,6 +132,8 @@ services:
       - schema-registry
       - connect
       - control-center
+    ports:
+      - "3317:3306"
     environment:
       MYSQL_ROOT_PASSWORD: pass
   source:
