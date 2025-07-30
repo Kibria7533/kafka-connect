@@ -1,4 +1,4 @@
-FROM mysql
+FROM mysql:8.0
 # RUN apt update 
 # RUN apt install tcpdump -y
 COPY custom.cnf /etc/mysql/conf.d/custom.cnf

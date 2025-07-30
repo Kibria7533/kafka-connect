@@ -2,7 +2,7 @@
   "name": "moviessource",
   "config": {
     "connector.class": "io.debezium.connector.mysql.MySqlConnector",
-    "database.hostname": "192.168.96.10",
+    "database.hostname": "172.18.0.9",
     "database.port": "3306",
     "database.user": "root",
     "database.password": "pass",
